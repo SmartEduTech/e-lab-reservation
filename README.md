@@ -42,7 +42,56 @@ interfaces. You can then visit the site at http://localhost:8080/
  $ composer require smartedutech/litelle-framework-generator
 ```
 the file used to generate your CRUD is '/public/generator.php'
- 
+## Development mode configure generator
+to configure the crud you must implement this file 'vendor\smartedutech\litelle-framework-generator\src\Configgen\module.php' 
+the file content the name of package and the name of your controllers and actions with the database tables 
+'''configure application package
+$_APP_CONF=array(
+    "APPNAME"=>"e-lab-reservation"
+);
+'''
+
+'''module configure
+ "modules"=>array(
+        "admin"=>array(
+            "name"=>"admin"
+            ,"Controller"=>array(
+            )
+        )
+ )
+ '''
+
+ ''controllers configure
+ "roles"=>array(
+    "name"=>"roles",
+    "actions"=>array()
+ )
+ '''
+
+'''action configure
+"{Controller}"=>array(
+        "name"=>"{Controller}",
+        "actions"=>array(
+            "edit{Table}"=>array(
+                "Type"=>"simple"//"AJAX"
+                ,'Role'=>"edit"//lister | consulter | gestion | delete | save
+                ,"view"=>array(
+                  "view"=>true
+                  ,"layout"=>false
+                  ,"pages"=>array(
+                        "edit"=>"edit{Table}"
+                        ,"lister"=>"lister{Table}"
+                        //,"id"=>"id{Table}"
+                      )
+                )
+                ,"activity"=>"edit"
+                ,"form"=>"form{Table}"
+                ,"model"=>array(
+                    "table"=>"{Table}"
+                )
+            ),
+        )
+'''
 
 ## Running Unit Tests
  
