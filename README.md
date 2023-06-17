@@ -36,17 +36,13 @@ interfaces. You can then visit the site at http://localhost:8080/
 
 ## Development mode
  
-
-You may provide development-only modules and bootstrap-level configuration in
-`config/development.config.php.dist`, and development-only application
-configuration in `config/autoload/development.local.php.dist`. Enabling
-development mode will copy these files to versions removing the `.dist` suffix,
-while disabling development mode will remove those copies.
-
-Development mode is automatically enabled as part of the skeleton installation process. 
-After making changes to one of the above-mentioned `.dist` configuration files you will
-either need to disable then enable development mode for the changes to take effect,
-or manually make matching updates to the `.dist`-less copies of those files.
+ You cas use a simple generator included in this project.
+ the generator is a package named smartedutech/litelle-framework-generator
+```bash
+ $ composer require smartedutech/litelle-framework-generator
+```
+the file used to generate your CRUD is '/public/generator.php'
+ 
 
 ## Running Unit Tests
  
