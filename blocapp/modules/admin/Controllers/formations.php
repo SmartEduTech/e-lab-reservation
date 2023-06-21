@@ -119,6 +119,7 @@ $Vue->setlayout("simplelayout");
 $Vue->generate();
 }
 
+
    /**
    * deleteformations
    */

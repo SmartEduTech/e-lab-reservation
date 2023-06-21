@@ -14,6 +14,13 @@ $_Routes=array(
                         ,"Action"=>"editroles"
                         ,"Roles"=>array()
     ),
+
+    "Home&security"=>array(
+                          "Module"=>"admin"
+                          ,"Controller"=>"Home&security"
+                          ,"Action"=>"Home&security"
+                          ,"Roles"=>array()),
+
     "listerroles"=>array(
                         "Module"=>"admin"
                         ,"Controller"=>"roles"
