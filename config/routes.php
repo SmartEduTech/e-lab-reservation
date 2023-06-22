@@ -2,6 +2,15 @@
 
 global $_Routes;
 $_Routes=array(
+
+
+    "door"=>array(
+        "Module"=>"smarthome"
+        ,"Controller"=>"Smarthome"
+        ,"Action"=>"door"
+        ,"Roles"=>array()
+),
+
     "editformations"=>array(
         "Module"=>"admin"
         ,"Controller"=>"formations"
@@ -14,6 +23,8 @@ $_Routes=array(
     ,"Action"=>"edittypeformation"
     ,"Roles"=>array()
 ),
+
+
 "listertypeformation"=>array(
     "Module"=>"admin"
     ,"Controller"=>"typeformation"
